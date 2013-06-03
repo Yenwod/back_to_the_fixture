@@ -1,7 +1,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ar_fixtures}
-  s.version = "0.0.4"
+  s.version = "0.0.4.1"
 
   s.specification_version = 2 if s.respond_to? :specification_version=
 
