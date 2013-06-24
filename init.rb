@@ -1,1 +1,1 @@
-require 'ar_fixtures'
+require 'back_to_the_fixture'
