@@ -21,7 +21,7 @@ especially for tests, can be unwieldy. However, fixtures can still be useful in 
 Put this in your gemfile and run bundle install
 
 ```
-gem 'back_to_the_fixture'
+gem 'back_to_the_fixture', :git => 'https://github.com/meesterdude/back_to_the_fixture.git'
 ```
 
 Let's go through some examples in the rails console
