@@ -129,7 +129,7 @@ Collects records from various models and outputs them to a fixture file or files
 ##### options
 
  * `:template` can be a string of the relative path to a fixture template YAML file, or the hash itself. See the 'Templates' section for more info. 
- * `:template_key` select the root_key from the template to use
+ * `:template_key` select the root_key from the template to use. defaults to the first key of template
  * `:save_path` controls the relative path of output. 
  * `:save_name` is the name of the tree to save. defaults to to `#{root_key}_tree.yml`
  * `:split` if true, will split the tree across multiple YAML files, one for each model, in a directory with the template_key name. :save_path overrides the directory to write to. 
@@ -141,7 +141,7 @@ Collects records from various models and outputs them to a fixture file or files
 ```
 > BackToTheFixture.dump_tree(:template => "fixtures/templates/new_users.yml", :template_key => :noobs)
 => true
-> BackToTheFixture.dump_tree(:template => {:noobs => [{:users => {:grab => [:posts], :query_limit => 3, :order => 'created_at DESC'}}]}, :template_key => :noobs, :split => true)
+> BackToTheFixture.dump_tree(:template => {:noobs => [{:users => {:grab => [:posts], :query_limit => 3, :order => 'created_at DESC'}}]}, :split => true)
 => true
 ```
 

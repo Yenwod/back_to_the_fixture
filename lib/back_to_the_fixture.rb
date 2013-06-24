@@ -44,6 +44,7 @@ class BackToTheFixture
     if opts[:template].is_a?(String)
       opts[:template] = read_yaml_file(opts[:template])
     end
+    opts[:template_key] ||= opts[:template].keys.first
     if opts[:split]
       opts[:save_path] ||= 'fixtures/models/' + opts[:template_key].to_s.downcase
     else
