@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.date = %q{2013-06-17}
   s.description = %q{Creates fixtures, originally based on ar_fixtures}
   s.email = %q{russell@noivafabrica.com}
-  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
+  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.md"]
   s.files = ["CHANGELOG", "History.txt", "MIT-LICENSE", "Manifest.txt", "README.md", "Rakefile", "about.yml", "init.rb", "lib/back_to_the_fixture.rb", "tasks/back_to_the_fixture.rake", "test/ar_fixtures_test.rb", "test/database.yml", "test/fixtures/beer.rb", "test/fixtures/beers.yml", "test/fixtures/beers_drunkards.yml", "test/fixtures/drunkard.rb", "test/fixtures/drunkards.yml", "test/fixtures/glass.rb", "test/fixtures/glasses.yml", "test/schema.rb", "test/test_helper.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/meesterdude/back_to_the_fixture}
