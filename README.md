@@ -7,7 +7,7 @@ It's been updated for rails 3 and has some new and improved functionality.
 
 ## But aren't fixtures dead?
 
-Most people preffer to use factories over fixtures for testing purposes because working with and maintaing fixtures,
+Most people preffer to use factories over fixtures for testing purposes because working with and maintaining fixtures,
 especially for tests, can be unwieldy. However, fixtures can still be useful in other scenarios:
 
   * Static models, like a `MembershipPlan`, where it's a few records that should be the same in all enviroments. 
