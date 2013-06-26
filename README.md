@@ -64,7 +64,7 @@ Takes a relative path to a fixture file as it's only parameter, executes destroy
 
 ## back\_to\_the\_fixture details
 
-Dumping one model is quick and easy, but it isn't very flexible. If you have a lot of data that depends on other data, it can get quite cumbersome to manage it all. Originally, I wanted to be able to do it all automatically using reflections on associations; but when presented with recursive relationships it became non-trivial to identify which direction to things should be approached.
+Dumping one model is quick and easy, but it isn't very flexible. If you have a lot of data that depends on other data, it can get quite cumbersome to manage it all. Originally, I wanted to be able to do it all automatically using reflections on associations; but when presented with recursive relationships it became non-trivial to identify which direction  things should be approached.
 
 ### Templates 
 
