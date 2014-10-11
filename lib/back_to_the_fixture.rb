@@ -105,7 +105,7 @@ class BackToTheFixture
     def self.parse_branch(results, hash_template = {})
       result_array = Array.new
       if results.respond_to?(:each)
-        results = results.scoped
+        results = results.where(nil)
         results = results.send('where', hash_template[:where]) if hash_template[:where].present? 
         results = results.send('order', hash_template[:order]) if hash_template[:order].present? 
         results = results.send('limit', hash_template[:query_limit]) if hash_template[:query_limit].present? 
@@ -146,7 +146,7 @@ class BackToTheFixture
         if item.class == Symbol # like :events
           hash_template = {}
           if record.nil?
-            results = item.to_s.classify.constantize.scoped
+            results = item.to_s.classify.constantize.where(nil)
           else
             results = record.send(item)
           end
@@ -154,7 +154,7 @@ class BackToTheFixture
 
           hash_template = item[item.keys.first]
           if record.nil?
-            results = item.keys.first.to_s.classify.constantize.scoped
+            results = item.keys.first.to_s.classify.constantize.where(nil)
           else
             results = record.send(item.keys.first)
           end
@@ -245,7 +245,7 @@ class ActiveRecord::Base
       write_method = opts[:append] ? 'a' : 'w'
       internal_opts = [:save_path, :save_name, :append]
       File.open(Rails.root + opts[:save_path] + opts[:save_name], write_method) do  |file|
-        yaml = self.scoped.where(opts.except(*internal_opts)).inject({}) do |hsh, record|
+        yaml = self.where(nil).where(opts.except(*internal_opts)).inject({}) do |hsh, record|
           hsh.merge((record.attributes[opts[:key].to_s] || "#{self}-#{'%05i' % record.id rescue record.id}") => record.attributes)
         end.to_yaml(:SortKeys => true)
         if opts[:append]
