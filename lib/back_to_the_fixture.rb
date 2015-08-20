@@ -48,7 +48,7 @@ class BackToTheFixture
     if opts[:split]
       opts[:save_path] ||= 'fixtures/models/' + opts[:template_key].to_s.downcase
     else
-      opts[:save_path] += 'fixtures/trees/' 
+      opts[:save_path] = 'fixtures/trees/' 
       opts[:save_name] ||= opts[:template_key].to_s.downcase + "_tree.yml"
       save_as = Rails.root + opts[:save_path] + opts[:save_name]
       FileUtils.touch(save_as) unless File.exists? save_as
